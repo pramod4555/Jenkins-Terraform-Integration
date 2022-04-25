@@ -9,11 +9,6 @@ pipeline {
             git branch: 'main', credentialsId: 'first', url: 'https://github.com/pramod4555/Terraform.git'
             }
             }
-            steps("terraform credentials in environment variables"){
-            environment {
-            Path ="/usr/local/bin"
-            }
-            }
             stage('terraform init'){
         steps{
         sh 'terraform init'
